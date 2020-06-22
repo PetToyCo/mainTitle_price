@@ -1,0 +1,19 @@
+{
+  "name": "maintitle_price",
+  "version": "1.0.0",
+  "description": "This service provides a module that displays the item's title and price, as well as a quantity button.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PetToyCo/mainTitle_price.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PetToyCo/mainTitle_price/issues"
+  },
+  "homepage": "https://github.com/PetToyCo/mainTitle_price#readme"
+}
