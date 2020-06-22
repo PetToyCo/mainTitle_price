@@ -12,6 +12,7 @@ db.once('open', () => {
 });
 
 const priceSchema = mongoose.Schema({
+  itemId: String,
   price: {
     type: Number,
     required: true
