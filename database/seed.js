@@ -59,14 +59,18 @@ const itemData = [
 const generateRecords = (num) => {
   var itemId = 110;
 
-  const digits = [0,1,2,3,4,5,6,7,8,9];
+  //const digits = [0,1,2,3,4,5,6,7,8,9];
 
   for (var i = 0; i < num; i++) {
-    var newDoc;
+    var lastDigit = Math.floor(Math.random() * 10);
 
-    newDoc = {
+    if (lastDigit === 0) {
+      lastDigit = 9;
+    }
+
+    var newDoc = {
       itemId: itemId,
-      price: `${Math.floor(Math.random() * 90 + 10)}.${Math.floor(Math.random() * 10)}${Math.floor(Math.random() * 10)}`,
+      price: `${Math.floor(Math.random() * 90 + 10)}.${Math.floor(Math.random() * 10)}${lastDigit}`,
       currency: '$'
     }
 
