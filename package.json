@@ -18,7 +18,6 @@
   },
   "homepage": "https://github.com/PetToyCo/mainTitle_price#readme",
   "dependencies": {
-    "faker": "^4.1.0",
     "mongoose": "^5.9.19"
   }
 }

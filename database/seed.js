@@ -1,6 +1,5 @@
 const db = require('./index.js');
 const mongoose = require('mongoose');
-const faker = require('faker');
 
 const itemData = [
   {
@@ -59,8 +58,6 @@ const itemData = [
 const generateRecords = (num) => {
   var itemId = 110;
 
-  //const digits = [0,1,2,3,4,5,6,7,8,9];
-
   for (var i = 0; i < num; i++) {
     var lastDigit = Math.floor(Math.random() * 10);
 
@@ -80,6 +77,7 @@ const generateRecords = (num) => {
 
 };
 
+//create 90 new records
 generateRecords(90);
 
 
@@ -94,5 +92,5 @@ const insertItemData = (items) => {
     })
 };
 
-//call that func
+//insert all records into db
 insertItemData(itemData);
