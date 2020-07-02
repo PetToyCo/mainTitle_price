@@ -22,5 +22,10 @@ const priceSchema = mongoose.Schema({
 
 const Price = mongoose.model('Price', priceSchema);
 
+const getTitleAndPrice = (itemId) => {
+  return Price.find({itemId: itemId}).select('-_id -__v').lean().exec();
+};
+
 module.exports.Price = Price;
 module.exports.db = db;
+module.exports.getTitleAndPrice = getTitleAndPrice;
