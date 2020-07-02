@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "seed": "node database/seed.js",
+    "start": "nodemon server.js",
     "test": "jest --forceExit --detectOpenHandles"
   },
   "repository": {
@@ -18,7 +19,10 @@
   },
   "homepage": "https://github.com/PetToyCo/mainTitle_price#readme",
   "dependencies": {
-    "mongoose": "^5.9.19"
+    "express": "^4.17.1",
+    "mongoose": "^5.9.19",
+    "nodemon": "^2.0.4",
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "jest": "^26.1.0"

@@ -23,3 +23,4 @@ const priceSchema = mongoose.Schema({
 const Price = mongoose.model('Price', priceSchema);
 
 module.exports.Price = Price;
+module.exports.db = db;
