@@ -4,7 +4,8 @@
   "description": "This service provides a module that displays the item's title and price, as well as a quantity button.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "seed": "node database/seed.js",
+    "test": "jest --forceExit --detectOpenHandles"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/PetToyCo/mainTitle_price/issues"
   },
-  "homepage": "https://github.com/PetToyCo/mainTitle_price#readme"
+  "homepage": "https://github.com/PetToyCo/mainTitle_price#readme",
+  "dependencies": {
+    "mongoose": "^5.9.19"
+  },
+  "devDependencies": {
+    "jest": "^26.1.0"
+  }
 }
