@@ -34,6 +34,6 @@ From within the root directory:
 npm install
 
 ### Running Tests
-This service uses Jest for unit testing of the mongoose database schema.
+This service uses Jest for unit testing of the mongoose database schema and server endpoints.
 From within the root directory:
 npm run test
