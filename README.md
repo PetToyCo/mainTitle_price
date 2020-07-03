@@ -9,8 +9,9 @@ This service provides a module that displays the item's title and price, as well
 
 ## Table of Contents
   1. Usage
-  2. Requirements
-  3. Development
+  2. Endpoints
+  3. Requirements
+  4. Development
 
 ## Usage
 1. From the root directory:
@@ -20,9 +21,22 @@ npm install
 From within the root directory:
 npm run seed
 
-3. To run tests:
+3. To start the server:
 From the root directory:
-npm run test
+npm start
+
+4. Navigate to localhost:3005
+
+## Endpoints
+This service has one endpoint (/itemPrice/:itemId) which can be used to retrieve a JSON object with that item's price and currency. Valid itemIds are from 100-199 inclusive.
+
+localhost:3005/itemPrice/###
+JSON response format:
+{
+  itemId: "a string with the item's id",
+  price: “a number representing the item’s price”,
+  currency: “a string representing the symbol of the item’s currency, ie $”
+}
 
 
 ## Requirements
@@ -34,6 +48,6 @@ From within the root directory:
 npm install
 
 ### Running Tests
-This service uses Jest for unit testing of the mongoose database schema.
+This service uses Jest for unit testing of the mongoose database schema and server endpoints.
 From within the root directory:
 npm run test
