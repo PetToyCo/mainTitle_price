@@ -4,6 +4,7 @@
   "description": "This service provides a module that displays the item's title and price, as well as a quantity button.",
   "main": "index.js",
   "scripts": {
+    "build": "webpack -d --watch",
     "seed": "node database/seed.js",
     "start": "nodemon start.js",
     "test": "jest --forceExit --detectOpenHandles"
@@ -22,11 +23,18 @@
     "express": "^4.17.1",
     "mongoose": "^5.9.19",
     "nodemon": "^2.0.4",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "react": "^16.13.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^8.1.0",
     "jest": "^26.1.0",
     "request": "^2.88.2",
-    "supertest": "^4.0.2"
+    "supertest": "^4.0.2",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
   }
 }
