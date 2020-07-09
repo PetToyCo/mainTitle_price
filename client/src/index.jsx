@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import { priceGuarantee } from './style.js';
+import { priceGuarantee, greenText, blueText } from './style.js';
 
 class MainTitle extends React.Component {
   constructor(props) {
@@ -14,6 +14,9 @@ class MainTitle extends React.Component {
       currency: '',
       price: ''
     }
+
+    this.onMouseOver.bind(this);
+    this.onMouseOut.bind(this);
   }
 
   //hardcoded to item 100 for development
@@ -60,6 +63,17 @@ class MainTitle extends React.Component {
       });
   }
 
+  onMouseOver(e) {
+    var element = document.getElementById(e.target.id);
+    element.style.color = '#00395e';
+    element.style.textDecoration = 'underline' ;
+  }
+
+  onMouseOut(e) {
+    var element = document.getElementById(e.target.id);
+    element.style.color = '#005891';
+    element.style.textDecoration = 'none' ;
+  }
 
 
   render() {
@@ -88,8 +102,8 @@ class MainTitle extends React.Component {
               <span>
                 <img style={priceGuarantee}></img>
               </span>
-              <span>Price Match Guarantee </span>
-              <span>Details</span>
+              <span style={greenText}>Price Match Guarantee </span>
+              <span id='details' style={blueText} onMouseEnter={this.onMouseOver} onMouseLeave={this.onMouseOut}>Details</span>
             </div>
             <div id='qty'>
               <form>
