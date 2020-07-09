@@ -33,13 +33,14 @@ class MainTitle extends React.Component {
     });
 
     //axios request for brand, title
-    axios.get(`http://127.0.0.1/descriptionObject/${item}`)
+    axios.get(`http://127.0.0.1:3002/descriptionObject/${item}`)
     .then(data => {
       console.log('success getting data in componentDidMount: ', data);
       this.setState({
-        currency: data.data.currency,
-        price: data.data.price
+        brand: data.data.description.primaryBrand,
+        title: data.data.description.title
       });
+      console.log(this.state);
     })
     .catch(err => {
       console.log('error getting descObj in componentDidMount: ', err);
