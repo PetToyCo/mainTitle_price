@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { priceGuarantee } from './style.js';
 
 class MainTitle extends React.Component {
   constructor(props) {
@@ -84,7 +85,10 @@ class MainTitle extends React.Component {
           </div>
           <div id='bottomSection'>
             <div id='promo'>
-              <span>Price Match Guarentee Image </span>
+              <span>
+                <img style={priceGuarantee}></img>
+              </span>
+              <span>Price Match Guarantee </span>
               <span>Details</span>
             </div>
             <div id='qty'>

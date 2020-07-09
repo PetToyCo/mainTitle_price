@@ -1,9 +1,11 @@
 const express = require('express');
 const path = require('path');
 const db = require('./database/index.js');
+const morgan = require('morgan');
 
 const app = express();
 
+app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'client/public')));
 
 app.get('/itemPrice/:itemId', (req, res) => {
