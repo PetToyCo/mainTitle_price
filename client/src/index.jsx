@@ -9,6 +9,8 @@ class MainTitle extends React.Component {
     this.state = {
       brand: '',
       title: '',
+      length: '',
+      width: '',
       rating: '',
       reviews: '',
       currency: '',
@@ -40,9 +42,14 @@ class MainTitle extends React.Component {
     axios.get(`http://127.0.0.1:3002/descriptionObject/${item}`)
       .then(data => {
         console.log('success getting descriptionObject');
+        var length = data.data.attributes.length.split(' ')[0];
+        var width = data.data.attributes.width.split(' ')[0];
+
         this.setState({
           brand: data.data.description.primaryBrand,
-          title: data.data.description.title
+          title: data.data.description.title,
+          length: length,
+          width: width
         });
       })
       .catch(err => {
@@ -81,7 +88,7 @@ class MainTitle extends React.Component {
       <div id='mainTitle'>
         <div id='info'>
           {/* note to add L and W */}
-          <h1>{`${this.state.title}`}</h1>
+          <h1 id='title'>{`${this.state.title}, ${this.state.length}" X ${this.state.width}"`}</h1>
           <div id='by'>By: <span>{this.state.brand}</span></div>
           <div id='wrapper'>
             <div id='stars'>
