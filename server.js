@@ -8,6 +8,16 @@ const app = express();
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'client/public')));
 
+//crossorigin permission for 3004 and 3006
+app.use((req, res, next) => {
+  if (req.headers.referer.includes('3004')) {
+    res.header('Access-Control-Allow-Origin', 'http://127.0.0.1:3004');
+  } else if (req.headers.referer.includes('3006')) {
+    res.header('Access-Control-Allow-Origin', 'http://127.0.0.1:3006');
+  }
+  next();
+});
+
 app.get('/itemPrice/:itemId', (req, res) => {
   const itemId = req.params.itemId;
 
