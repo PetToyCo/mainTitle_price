@@ -7,7 +7,7 @@
     "build": "webpack -d --watch",
     "seed": "node database/seed.js",
     "start": "nodemon start.js",
-    "test": "jest --coverage --forceExit --detectOpenHandles"
+    "test": "jest --forceExit --detectOpenHandles"
   },
   "repository": {
     "type": "git",

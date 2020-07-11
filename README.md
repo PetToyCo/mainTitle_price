@@ -25,7 +25,9 @@ npm run seed
 From the root directory:
 npm start
 
-4. Navigate to localhost:3005
+4. Please note: This service makes GET requests to the descriptions_directions_attributes_ service and to the reviews service. Both of those services' servers must be running, and both of their databases must be seeded, in order for the mainTitle_price service to function correctly. Both of those services will also need to have CORS permissions set to allow requests from the 3005 port. See this service's server.js file (starting at line 11) for an example of how to setup these headers if needed.
+
+5. In the browser, navigate to http://127.0.0.1:3005 to see the service. For development purposes it has been hardcoded to display information for item 100.
 
 ## Endpoints
 This service has one endpoint (/itemPrice/:itemId) which can be used to retrieve a JSON object with that item's price and currency. Valid itemIds are from 100-199 inclusive.

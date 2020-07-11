@@ -87,7 +87,6 @@ class MainTitle extends React.Component {
     return (
       <div id='mainTitle'>
         <div id='info'>
-          {/* note to add L and W */}
           <h1 id='title'>{`${this.state.title}, ${this.state.length}" X ${this.state.width}"`}</h1>
           <div id='by'>By: <span>{this.state.brand}</span></div>
           <div id='wrapper'>
