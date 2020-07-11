@@ -30,7 +30,7 @@ npm start
 ## Endpoints
 This service has one endpoint (/itemPrice/:itemId) which can be used to retrieve a JSON object with that item's price and currency. Valid itemIds are from 100-199 inclusive.
 
-localhost:3005/itemPrice/###
+Endpoint: /itemPrice/###
 JSON response format:
 {
   itemId: "a string with the item's id",
@@ -48,6 +48,6 @@ From within the root directory:
 npm install
 
 ### Running Tests
-This service uses Jest for unit testing of the mongoose database schema and server endpoints.
+This service uses Jest for unit testing of the mongoose database schema and server endpoints, and Jest with Enzyme for testing of the React components.
 From within the root directory:
 npm run test
