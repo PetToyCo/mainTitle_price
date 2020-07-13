@@ -29,9 +29,8 @@ app.get('/itemPrice/:itemId', (req, res) => {
   if (itemId < 100 || itemId > 199) {
     console.log(itemId);
     res.status(404).send('Invalid itemId');
-  }
-
-  db.getTitleAndPrice(itemId)
+  } else {
+    db.getTitleAndPrice(itemId)
     .then(data => {
       console.log('success getting title and price: ', data);
       res.send(data[0]);
@@ -40,6 +39,7 @@ app.get('/itemPrice/:itemId', (req, res) => {
       res.status(500).send();
       console.log('error in getTitleAndPrice: ', err);
     })
+  }
 });
 
 
