@@ -32,15 +32,16 @@ app.get('/itemPrice/:itemId', (req, res) => {
   } else {
     db.getTitleAndPrice(itemId)
     .then(data => {
-      console.log('success getting title and price: ', data);
+      console.log('success getting title and price');
       res.send(data[0]);
     })
     .catch(err => {
       res.status(500).send();
-      console.log('error in getTitleAndPrice: ', err);
+      console.log('error in getTitleAndPrice');
     })
   }
 });
+
 
 
 module.exports = app;
