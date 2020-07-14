@@ -1,17 +1,18 @@
 import React from 'react';
-import { upperSection, ratingNum, price, priceGuarantee, greenText, blueText } from './style.js';
+import { title, upperSection, blackStars, ratingNum, price, priceGuarantee, greenText, blueText } from './style.js';
 
 var Info = (props) => (
   <div id='info'>
-    <h1 id='title'>{`${props.product.title}, ${props.product.length}" X ${props.product.width}"`}</h1>
-    <div id='by'>By: <span id='brand' style={blueText} onMouseEnter={props.onMouseOver} onMouseLeave={props.onMouseOut}>{props.product.brand}</span></div>
+    <h1 id='title' style={title}>{`${props.product.title}, ${props.product.length}" X ${props.product.width}"`}</h1>
+    <div id='by'><span style={{fontSize: '.8125em',
+    lineHeight: '1.38462em',}}>By: </span><span id='brand' style={blueText} onMouseEnter={props.onMouseOver} onMouseLeave={props.onMouseOut}>{props.product.brand}</span></div>
     <div id='wrapper' style={upperSection}>
       <div id='stars'>
-        <span>Star</span>
-        <span>Star</span>
-        <span>Star</span>
-        <span>Star</span>
-        <span>Star</span>
+        <span style={blackStars}></span>
+        <span style={blackStars}></span>
+        <span style={blackStars}></span>
+        <span style={blackStars}></span>
+        <span style={blackStars}></span>
         <span id='numOfReviews' style={ratingNum}>{`(${props.product.reviews})`}</span>
       </div>
       <div id='price' style={price}>

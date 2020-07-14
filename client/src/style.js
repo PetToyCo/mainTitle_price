@@ -8,6 +8,26 @@ const priceGuarantee = {
   backgroundSize: 'cover'
 }
 
+const blackStars = {
+  backgroundImage: 'url("http://127.0.0.1:3005/blackStar.png")',
+  height: '14px',
+  width: '14px',
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: 'cover',
+  display: 'inline-block'
+}
+
+const title = {
+  fontSize: '1.25em',
+  lineHeight: '1.25em',
+  padding: '0',
+  fontWeight: 'bold',
+  fontStyle: 'normal',
+  fontStretch: 'normal',
+  letterSpacing: 'normal',
+  color: '#333'
+}
+
 const main = {
   width: '30%',
   marginLeft: '1%',
@@ -55,10 +75,12 @@ const blueText = {
 
 export {
   priceGuarantee,
+  blackStars,
   greenText,
   blueText,
   price,
   upperSection,
   main,
-  ratingNum
+  ratingNum,
+  title
 }
