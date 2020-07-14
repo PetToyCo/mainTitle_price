@@ -8,6 +8,12 @@ const priceGuarantee = {
   backgroundSize: 'cover'
 }
 
+const main = {
+  width: '30%',
+  marginLeft: '1%',
+  marginRight: '1%'
+}
+
 const upperSection = {
   borderBottom: '1px solid #d4dadc',
   marginBottom: '20px',
@@ -19,6 +25,18 @@ const price = {
   fontSize: '1.25em',
   fontWeight: 'bold',
   lineHeight: '1.25em'
+}
+
+const ratingNum = {
+  width: '29.8px',
+  height: '18px',
+  fontFamily: 'Arial',
+  fontSize: '13px',
+  fontWeight: 'bold',
+  lineHeight: '1.38',
+  letterSpacing: '.1px',
+  textAlign: 'left',
+  color: '#333'
 }
 
 const greenText = {
@@ -40,5 +58,7 @@ export {
   greenText,
   blueText,
   price,
-  upperSection
+  upperSection,
+  main,
+  ratingNum
 }

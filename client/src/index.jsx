@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import Info from './info.jsx';
+import { main } from './style.js';
 
 class MainTitle extends React.Component {
   constructor(props) {
@@ -85,7 +86,7 @@ class MainTitle extends React.Component {
 
   render() {
     return (
-      <div id='mainTitle'>
+      <div id='mainTitle' style={main}>
         <Info product={this.state} onMouseOver={this.onMouseOver} onMouseOut={this.onMouseOut}/>
       </div>
     )

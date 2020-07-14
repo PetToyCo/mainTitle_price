@@ -1,5 +1,5 @@
 import React from 'react';
-import { upperSection, price, priceGuarantee, greenText, blueText } from './style.js';
+import { upperSection, ratingNum, price, priceGuarantee, greenText, blueText } from './style.js';
 
 var Info = (props) => (
   <div id='info'>
@@ -12,7 +12,7 @@ var Info = (props) => (
         <span>Star</span>
         <span>Star</span>
         <span>Star</span>
-        <span id='numOfReviews'>{`(${props.product.reviews})`}</span>
+        <span id='numOfReviews' style={ratingNum}>{`(${props.product.reviews})`}</span>
       </div>
       <div id='price' style={price}>
         <span id='currencySpan'>{props.product.currency}</span>
