@@ -4,7 +4,7 @@ import { priceGuarantee, greenText, blueText } from './style.js';
 var Info = (props) => (
   <div id='info'>
     <h1 id='title'>{`${props.product.title}, ${props.product.length}" X ${props.product.width}"`}</h1>
-    <div id='by'>By: <span>{props.product.brand}</span></div>
+    <div id='by'>By: <span id='brand' style={blueText} onMouseEnter={props.onMouseOver} onMouseLeave={props.onMouseOut}>{props.product.brand}</span></div>
     <div id='wrapper'>
       <div id='stars'>
         <span>Star</span>
