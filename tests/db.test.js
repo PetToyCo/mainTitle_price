@@ -3,6 +3,7 @@ const db = require('../database/index.js');
 const app = require('../server.js');
 const supertest = require('supertest');
 const request = supertest(app);
+import "babel-polyfill";
 
 const fakeData = {
   itemId: '200',
