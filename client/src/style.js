@@ -8,6 +8,19 @@ const priceGuarantee = {
   backgroundSize: 'cover'
 }
 
+const upperSection = {
+  borderBottom: '1px solid #d4dadc',
+  marginBottom: '20px',
+  paddingBottom: '15px'
+}
+
+const price = {
+  color: '#333',
+  fontSize: '1.25em',
+  fontWeight: 'bold',
+  lineHeight: '1.25em'
+}
+
 const greenText = {
   color: '#007500',
   fontWeight: 'bold',
@@ -25,5 +38,7 @@ const blueText = {
 export {
   priceGuarantee,
   greenText,
-  blueText
+  blueText,
+  price,
+  upperSection
 }

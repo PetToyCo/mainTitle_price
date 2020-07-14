@@ -1,11 +1,11 @@
 import React from 'react';
-import { priceGuarantee, greenText, blueText } from './style.js';
+import { upperSection, price, priceGuarantee, greenText, blueText } from './style.js';
 
 var Info = (props) => (
   <div id='info'>
     <h1 id='title'>{`${props.product.title}, ${props.product.length}" X ${props.product.width}"`}</h1>
     <div id='by'>By: <span id='brand' style={blueText} onMouseEnter={props.onMouseOver} onMouseLeave={props.onMouseOut}>{props.product.brand}</span></div>
-    <div id='wrapper'>
+    <div id='wrapper' style={upperSection}>
       <div id='stars'>
         <span>Star</span>
         <span>Star</span>
@@ -14,7 +14,7 @@ var Info = (props) => (
         <span>Star</span>
         <span id='numOfReviews'>{`(${props.product.reviews})`}</span>
       </div>
-      <div id='price'>
+      <div id='price' style={price}>
         <span id='currencySpan'>{props.product.currency}</span>
         <span id='priceSpan'>{props.product.price}</span>
       </div>
