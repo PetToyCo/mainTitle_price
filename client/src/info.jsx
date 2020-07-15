@@ -1,6 +1,6 @@
 import React from 'react';
 import Stars from './stars.jsx';
-import { title, upperSection, blackStars, ratingNum, price, priceGuarantee, greenText, blueText } from './style.js';
+import { title, upperSection, price, priceGuarantee, greenText, blueText, form, quantity, plusMinus, number } from './style.js';
 
 var Info = (props) => (
   <div id='info'>
@@ -10,11 +10,6 @@ var Info = (props) => (
     <div id='wrapper' style={upperSection}>
       <div id='starsDiv'>
         <Stars reviews={props.product.reviews} black={props.product.blackStars} white={props.product.whiteStars} half={props.product.halfStars}/>
-        {/* <span style={blackStars}></span>
-        <span style={blackStars}></span>
-        <span style={blackStars}></span>
-        <span style={blackStars}></span>
-        <span style={blackStars}></span> */}
       </div>
       <div id='price' style={price}>
         <span id='currencySpan'>{props.product.currency}</span>
@@ -32,11 +27,11 @@ var Info = (props) => (
       </div>
       <div id='qty'>
         <form>
-          <div id='form'>
-            <label>Quantity</label>
-            <input type='button' value='-' />
-            <input type='text' value='1' />
-            <input type='button' value='+' />
+          <div id='form' style={form}>
+            <label id='qty' style={quantity}>Qty</label>
+            <input type='button' value='-' style={plusMinus} />
+            <input type='text' value='1' style={number} />
+            <input type='button' value='+' style={plusMinus} />
           </div>
         </form>
       </div>

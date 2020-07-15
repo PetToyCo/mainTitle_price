@@ -97,6 +97,56 @@ const blueText = {
   lineHeight: '1.53846em'
 }
 
+const form = {
+  border: '1px solid #8e9da2',
+  borderRadius: '5px',
+  marginBottom: '10px',
+  display: 'inline-block',
+  width: '100%',
+  maxWidth: '1095px',
+  marginLeft: 'auto',
+  marginRight: 'auto',
+  clear: 'both'
+}
+
+const quantity = {
+  textAlign: 'center',
+  fontSize: '.9375em',
+  color: '#333',
+  height: '43px',
+  lineHeight: '43px',
+  margin: '0',
+  width: '20%'
+}
+
+const plusMinus = {
+  width: '26.66%',
+  borderLeft: '1px solid #d4dadc',
+  backgroundColor: 'transparent',
+  color: '#005891',
+  fontSize: '15px',
+  fontWeight: 'bold',
+  height: '43px',
+  cursor: 'pointer',
+  transition: '0.2s'
+}
+
+const number = {
+  backgroundColor: 'rgba(244,246,246,0.4)',
+  width: '26.66%',
+  borderLeft: '1px solid #d4dadc',
+  borderRadius: '0 5px 5px 0',
+  padding: '11px 15px',
+  boxSizing: 'border-box',
+  color: '#333',
+  fontSize: '0.9375em',
+  height: '43px',
+  backgroundSize: '0',
+  backgroundPosition: '95% center',
+  transition: '0.2s',
+  textAlign: 'center'
+}
+
 export {
   priceGuarantee,
   blackStars,
@@ -108,5 +158,9 @@ export {
   upperSection,
   main,
   ratingNum,
-  title
+  title,
+  form,
+  quantity,
+  plusMinus,
+  number
 }
