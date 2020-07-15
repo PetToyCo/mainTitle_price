@@ -15,7 +15,10 @@ class MainTitle extends React.Component {
       rating: '',
       reviews: '',
       currency: '',
-      price: ''
+      price: '',
+      blackStars: '',
+      whiteStars: '',
+      halfStars: ''
     }
 
     this.onMouseOver.bind(this);
@@ -61,10 +64,36 @@ class MainTitle extends React.Component {
     axios.get(`http://127.0.0.1:3001/averageReviews/${item}`)
       .then(data => {
         console.log('success getting averageReviews: ', data);
+        var whole = data.data.reviewAverage.split('.')[0];
+        var wholeNum = parseInt(whole);
+        var decimal = data.data.reviewAverage.split('.')[1];
+        var decNum = parseFloat(decimal);
+        console.log('wholeNum: ', wholeNum);
+        console.log('decNum: ', decNum);
+        var black;
+        var white;
+        var half;
+        if (decNum < 3) {
+          black = wholeNum;
+          white = 5 - wholeNum;
+          half = 0;
+        } else if (decNum < 7) {
+          black = wholeNum;
+          half = 1;
+          white = 4 - wholeNum;
+        } else {
+          black = wholeNum + 1;
+          white = 0;
+          half = 0;
+        }
         this.setState({
           rating: data.data.reviewAverage,
-          reviews: data.data.numberOfReviews
+          reviews: data.data.numberOfReviews,
+          blackStars: black,
+          whiteStars: white,
+          halfStars: half
         });
+        console.log('state: ', this.state);
       })
       .catch(err => {
         console.log('error getting averageReviews in componentDidMount: ', err);
@@ -82,6 +111,7 @@ class MainTitle extends React.Component {
     element.style.color = '#005891';
     element.style.textDecoration = 'none' ;
   }
+
 
 
   render() {

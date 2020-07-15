@@ -17,6 +17,24 @@ const blackStars = {
   display: 'inline-block'
 }
 
+const halfStars = {
+  backgroundImage: 'url("http://127.0.0.1:3005/halfStar.png")',
+  height: '14px',
+  width: '14px',
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: 'cover',
+  display: 'inline-block'
+}
+
+const whiteStars = {
+  backgroundImage: 'url("http://127.0.0.1:3005/whiteStar.png")',
+  height: '14px',
+  width: '14px',
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: 'cover',
+  display: 'inline-block'
+}
+
 const title = {
   fontSize: '1.25em',
   lineHeight: '1.25em',
@@ -82,6 +100,8 @@ const blueText = {
 export {
   priceGuarantee,
   blackStars,
+  halfStars,
+  whiteStars,
   greenText,
   blueText,
   price,

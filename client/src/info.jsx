@@ -1,4 +1,5 @@
 import React from 'react';
+import Stars from './stars.jsx';
 import { title, upperSection, blackStars, ratingNum, price, priceGuarantee, greenText, blueText } from './style.js';
 
 var Info = (props) => (
@@ -7,13 +8,13 @@ var Info = (props) => (
     <div id='by'><span style={{fontSize: '.8125em',
     lineHeight: '1.38462em',}}>By: </span><span id='brand' style={blueText} onMouseEnter={props.onMouseOver} onMouseLeave={props.onMouseOut}>{props.product.brand}</span></div>
     <div id='wrapper' style={upperSection}>
-      <div id='stars'>
+      <div id='starsDiv'>
+        <Stars reviews={props.product.reviews} black={props.product.blackStars} white={props.product.whiteStars} half={props.product.halfStars}/>
+        {/* <span style={blackStars}></span>
         <span style={blackStars}></span>
         <span style={blackStars}></span>
         <span style={blackStars}></span>
-        <span style={blackStars}></span>
-        <span style={blackStars}></span>
-        <span id='numOfReviews' style={ratingNum}>{`(${props.product.reviews})`}</span>
+        <span style={blackStars}></span> */}
       </div>
       <div id='price' style={price}>
         <span id='currencySpan'>{props.product.currency}</span>
