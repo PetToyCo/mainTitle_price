@@ -3,7 +3,7 @@ import { title, upperSection, blackStars, ratingNum, price, priceGuarantee, gree
 
 var Info = (props) => (
   <div id='info'>
-    <h1 id='title' style={title}>{`${props.product.title}, ${props.product.length}" X ${props.product.width}"`}</h1>
+    <div id='title' style={title}>{`${props.product.title}, ${props.product.length}" X ${props.product.width}"`}</div>
     <div id='by'><span style={{fontSize: '.8125em',
     lineHeight: '1.38462em',}}>By: </span><span id='brand' style={blueText} onMouseEnter={props.onMouseOver} onMouseLeave={props.onMouseOut}>{props.product.brand}</span></div>
     <div id='wrapper' style={upperSection}>
@@ -25,6 +25,7 @@ var Info = (props) => (
         <span>
           <img style={priceGuarantee}></img>
         </span>
+        <span> </span>
         <span style={greenText}>Price Match Guarantee </span>
         <span id='details' style={blueText} onMouseEnter={props.onMouseOver} onMouseLeave={props.onMouseOut}>Details</span>
       </div>

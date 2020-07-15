@@ -31,7 +31,13 @@ const title = {
 const main = {
   width: '30%',
   marginLeft: '1%',
-  marginRight: '1%'
+  marginRight: '1%',
+  display: 'block',
+  float: 'left',
+  margin: '0.5rem 2%',
+  minHeight: '0.125rem',
+  boxSizing: 'border-box',
+  width: '96%'
 }
 
 const upperSection = {
