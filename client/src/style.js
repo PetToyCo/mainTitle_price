@@ -103,6 +103,7 @@ const form = {
   marginBottom: '10px',
   display: 'inline-block',
   width: '100%',
+  overflow: 'hidden',
   maxWidth: '1095px',
   marginLeft: 'auto',
   marginRight: 'auto',
@@ -112,11 +113,16 @@ const form = {
 const quantity = {
   textAlign: 'center',
   fontSize: '.9375em',
+  fontWeight: 'bold',
   color: '#333',
   height: '43px',
   lineHeight: '43px',
   margin: '0',
-  width: '20%'
+  width: '20%',
+  clear: 'both',
+  minHeight: '0.125rem',
+  boxSizing: 'border-box',
+  float: 'left'
 }
 
 const plusMinus = {
