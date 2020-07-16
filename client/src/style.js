@@ -94,7 +94,8 @@ const blueText = {
   color: '#005891',
   fontWeight: 'bold',
   fontSize: '.8125em',
-  lineHeight: '1.53846em'
+  lineHeight: '1.53846em',
+  cursor: 'pointer'
 }
 
 const form = {

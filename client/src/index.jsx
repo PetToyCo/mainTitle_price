@@ -23,6 +23,8 @@ class MainTitle extends React.Component {
 
     this.onMouseOver.bind(this);
     this.onMouseOut.bind(this);
+    this.qtyOnClickPlus.bind(this);
+    this.qtyOnClickMinus.bind(this);
   }
 
   //hardcoded to item 100 for development
@@ -112,12 +114,30 @@ class MainTitle extends React.Component {
     element.style.textDecoration = 'none' ;
   }
 
+  qtyOnClickPlus() {
+    var num = document.getElementById('qtyNumber');
+    var value = num.value;
+    var valNum = parseInt(value);
+    valNum++;
+    num.value = valNum;
+  }
+
+  qtyOnClickMinus() {
+    var num = document.getElementById('qtyNumber');
+    var value = num.value;
+    var valNum = parseInt(value);
+    if (valNum > 1) {
+      valNum--;
+      num.value = valNum;
+    }
+  }
+
 
 
   render() {
     return (
       <div id='mainTitle' style={main}>
-        <Info product={this.state} onMouseOver={this.onMouseOver} onMouseOut={this.onMouseOut}/>
+        <Info product={this.state} onMouseOver={this.onMouseOver} onMouseOut={this.onMouseOut} plus={this.qtyOnClickPlus} minus={this.qtyOnClickMinus}/>
       </div>
     )
   }
