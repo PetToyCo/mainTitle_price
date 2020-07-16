@@ -43,6 +43,9 @@ JSON response format:
   currency: “a string representing the symbol of the item’s currency, ie $”
 }
 
+## Proxy-Integration
+To use this service with a proxy server, please add <div id="mainTitleMount"></div> right below the "gallery" div in index.html of your proxy server, and please add <script type="text/javascript" src="http://localhost:3005/bundle.js"></script> near the bottom of the file.
+
 
 ## Requirements
 Node 10.15.3
