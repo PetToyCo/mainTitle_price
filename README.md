@@ -11,8 +11,9 @@ This service provides a module that displays the item's title and price, as well
 ## Table of Contents
   1. Usage
   2. Endpoints
-  3. Requirements
-  4. Development
+  3. Proxy-Integration
+  4. Requirements
+  5. Development
 
 ## Usage
 1. From the root directory:
@@ -42,15 +43,17 @@ Follow additional instructions in the Proxy-Integration section below.
 This service has one endpoint (/itemPrice/:itemId) which can be used to retrieve a JSON object with that item's price and currency. Valid itemIds are from 100-199 inclusive.
 
 Endpoint: /itemPrice/###
+```
 JSON response format:
 {
   itemId: "a string with the item's id",
   price: “a number representing the item’s price”,
   currency: “a string representing the symbol of the item’s currency, ie $”
 }
+```
 
 ## Proxy-Integration
-To use this service with a proxy server, please add <div id="mainTitleMount"></div> right below the "gallery" div in index.html of your proxy server, and please add <script type="text/javascript" src="http://localhost:3005/bundle.js"></script> near the bottom of the same file.
+To use this service with a proxy server, please add `<div id="mainTitleMount"></div>` right below the "gallery" div in index.html of your proxy server, and please add `<script type="text/javascript" src="http://localhost:3005/bundle.js"></script>` near the bottom of the same file.
 
 This service is currently set up to be used with a proxy, but if you have changed it to development mode, then follow step 6 of this service's Usage section to switch it back.
 
