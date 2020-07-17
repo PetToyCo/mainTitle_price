@@ -22,11 +22,16 @@ npm install
 From within the root directory:
 npm run seed
 
-3. To start the server:
+3. Please note: This service makes GET requests to the descriptions_directions_attributes_ service and to the reviews service. Both of those services' servers must be running, and both of their databases must be seeded, in order for the mainTitle_price service to function correctly. Both of those services will also need to have CORS permissions set to allow requests from the 3005 port. See this service's server.js file (starting at line 11) for an example of how to setup these headers if needed.
+
+For proxy-usage, skip to Proxy-Integration section below.
+
+For development usage: 
+4. Go to client/src/index.jsx and comment out line 35, then uncomment out line 32. Then, from the root directory in the terminal: npm run build
+
+To start the server:
 From the root directory:
 npm start
-
-4. Please note: This service makes GET requests to the descriptions_directions_attributes_ service and to the reviews service. Both of those services' servers must be running, and both of their databases must be seeded, in order for the mainTitle_price service to function correctly. Both of those services will also need to have CORS permissions set to allow requests from the 3005 port. See this service's server.js file (starting at line 11) for an example of how to setup these headers if needed.
 
 5. In the browser, navigate to http://127.0.0.1:3005 to see the service. For development purposes it has been hardcoded to display information for item 100.
 
@@ -45,9 +50,9 @@ JSON response format:
 }
 
 ## Proxy-Integration
-To use this service with a proxy server, please add <div id="mainTitleMount"></div> right below the "gallery" div in index.html of your proxy server, and please add <script type="text/javascript" src="http://localhost:3005/bundle.js"></script> near the bottom of the file.
+To use this service with a proxy server, please add <div id="mainTitleMount"></div> right below the "gallery" div in index.html of your proxy server, and please add <script type="text/javascript" src="http://localhost:3005/bundle.js"></script> near the bottom of the same file.
 
-Then follow step 6 of this service's Usage section.
+This service is currently set up to be used with a proxy, but if you have changed it to development mode, then follow step 6 of this service's Usage section to switch it back.
 
 
 ## Requirements
