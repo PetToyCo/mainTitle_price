@@ -28,6 +28,7 @@ npm run seed
 For proxy-usage, skip to Proxy-Integration section below.
 
 For development usage: 
+
 4. Go to client/src/index.jsx and comment out line 35, then uncomment out line 32. Then, from the root directory in the terminal: npm run build
 
 To start the server:
