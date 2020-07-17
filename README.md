@@ -6,6 +6,7 @@ This service provides a module that displays the item's title and price, as well
 - https://github.com/PetToyCo/photo-gallery
 - https://github.com/PetToyCo/description_directions_attributes_
 - https://github.com/PetToyCo/elizabeth_ProxyServer
+- https://github.com/PetToyCo/ProductRecommendations
 
 ## Table of Contents
   1. Usage
@@ -29,6 +30,9 @@ npm start
 
 5. In the browser, navigate to http://127.0.0.1:3005 to see the service. For development purposes it has been hardcoded to display information for item 100.
 
+6. To use this service with a proxy server, go to client/src/index.jsx and uncomment line 35, then comment out line 32. Then, from the root directory in the terminal: npm run build 
+Follow additional instructions in the Proxy-Integration section below.
+
 ## Endpoints
 This service has one endpoint (/itemPrice/:itemId) which can be used to retrieve a JSON object with that item's price and currency. Valid itemIds are from 100-199 inclusive.
 
@@ -39,6 +43,11 @@ JSON response format:
   price: “a number representing the item’s price”,
   currency: “a string representing the symbol of the item’s currency, ie $”
 }
+
+## Proxy-Integration
+To use this service with a proxy server, please add <div id="mainTitleMount"></div> right below the "gallery" div in index.html of your proxy server, and please add <script type="text/javascript" src="http://localhost:3005/bundle.js"></script> near the bottom of the file.
+
+Then follow step 6 of this service's Usage section.
 
 
 ## Requirements
