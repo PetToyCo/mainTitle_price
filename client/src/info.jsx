@@ -18,10 +18,8 @@ var Info = (props) => (
     </div>
     <div id='bottomSection'>
       <div id='promo'>
-        <span>
-          <img style={priceGuarantee}></img>
-        </span>
-        <span> </span>
+        <span style={priceGuarantee}> </span>
+        <span>     </span>
         <span style={greenText}>Price Match Guarantee </span>
         <span id='details' onClick={props.openModal} style={blueText} onMouseEnter={props.onMouseOver} onMouseLeave={props.onMouseOut}>Details</span>
       </div>

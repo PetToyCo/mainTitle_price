@@ -2,6 +2,11 @@ const priceGuarantee = {
   backgroundImage: 'url("http://127.0.0.1:3005/checkmark.png")',
   width: '17px',
   height: '17px',
+
+  position: 'absolute',
+  // width: '100%',
+  // height: '100%',
+
   // display: 'block',
   // maxWidth: '100%',
   backgroundRepeat: 'no-repeat',
@@ -87,7 +92,8 @@ const greenText = {
   color: '#007500',
   fontWeight: 'bold',
   fontSize: '.8125em',
-  lineHeight: '1.53846em'
+  lineHeight: '1.53846em',
+  marginLeft: '20px'
 }
 
 const blueText = {
