@@ -25,15 +25,17 @@ class MainTitle extends React.Component {
     this.onMouseOut.bind(this);
     this.qtyOnClickPlus.bind(this);
     this.qtyOnClickMinus.bind(this);
+    this.onMouseOutButton.bind(this);
+    this.onMouseOverButton.bind(this);
   }
 
 
   componentDidMount() {
     //hardcoded to item 100 for development
-    //var item = 100;
+    var item = 100;
 
     //uncomment to use with a proxy server
-    var item = window.location.href.split('=')[1];
+    //var item = window.location.href.split('=')[1];
 
     //axios request for currency, price
     axios.get(`http://127.0.0.1:3005/itemPrice/${item}`)
@@ -109,13 +111,25 @@ class MainTitle extends React.Component {
   onMouseOver(e) {
     var element = document.getElementById(e.target.id);
     element.style.color = '#00395e';
-    element.style.textDecoration = 'underline' ;
+    element.style.textDecoration = 'underline';
   }
 
   onMouseOut(e) {
     var element = document.getElementById(e.target.id);
     element.style.color = '#005891';
-    element.style.textDecoration = 'none' ;
+    element.style.textDecoration = 'none';
+  }
+
+  onMouseOverButton(e) {
+    console.log('mouseButtonOn', e.target.id)
+    var element = document.getElementById(e.target.id);
+    element.style.backgroundColor = 'rgba(215, 220, 220, 0.4)';
+  }
+
+  onMouseOutButton(e) {
+    console.log('mouseButtonOff', e.target.id)
+    var element = document.getElementById(e.target.id);
+    element.style.backgroundColor = 'white';
   }
 
   qtyOnClickPlus() {
@@ -141,7 +155,7 @@ class MainTitle extends React.Component {
   render() {
     return (
       <div id='mainTitle' style={main}>
-        <Info product={this.state} onMouseOver={this.onMouseOver} onMouseOut={this.onMouseOut} plus={this.qtyOnClickPlus} minus={this.qtyOnClickMinus}/>
+        <Info product={this.state} onButton={this.onMouseOverButton} offButton={this.onMouseOutButton} onMouseOver={this.onMouseOver} onMouseOut={this.onMouseOut} plus={this.qtyOnClickPlus} minus={this.qtyOnClickMinus}/>
       </div>
     )
   }

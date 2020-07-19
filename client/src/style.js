@@ -129,7 +129,7 @@ const quantity = {
 const plusMinus = {
   width: '26.66%',
   borderLeft: '1px solid #d4dadc',
-  backgroundColor: 'transparent',
+  backgroundColor: 'white',
   color: '#005891',
   fontSize: '15px',
   fontWeight: 'bold',

@@ -29,9 +29,9 @@ var Info = (props) => (
         <form>
           <div id='form' style={form}>
             <label id='qty' style={quantity}>Qty</label>
-            <input type='button' value='-' style={plusMinus} onClick={props.minus} />
+            <input id='-' type='button' value='-' style={plusMinus} onClick={props.minus} onMouseEnter={props.onButton} onMouseLeave={props.offButton} />
             <input id='qtyNumber' type='text' value='1' style={number} />
-            <input type='button' value='+' style={plusMinus} onClick={props.plus} />
+            <input id='+' type='button' value='+' style={plusMinus} onClick={props.plus} onMouseEnter={props.onButton} onMouseLeave={props.offButton} />
           </div>
         </form>
       </div>
