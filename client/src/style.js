@@ -48,7 +48,8 @@ const title = {
   fontStyle: 'normal',
   fontStretch: 'normal',
   letterSpacing: 'normal',
-  color: '#333'
+  color: '#333',
+  fontFamily: 'Arial,sans-serif'
 }
 
 const main = {
@@ -73,7 +74,8 @@ const price = {
   color: '#333',
   fontSize: '1.25em',
   fontWeight: 'bold',
-  lineHeight: '1.25em'
+  lineHeight: '1.25em',
+  fontFamily: 'Arial,sans-serif'
 }
 
 const ratingNum = {
@@ -85,7 +87,8 @@ const ratingNum = {
   lineHeight: '1.38',
   letterSpacing: '.1px',
   textAlign: 'left',
-  color: '#333'
+  color: '#333',
+  fontFamily: 'Arial,sans-serif'
 }
 
 const greenText = {
@@ -93,7 +96,8 @@ const greenText = {
   fontWeight: 'bold',
   fontSize: '.8125em',
   lineHeight: '1.53846em',
-  marginLeft: '20px'
+  marginLeft: '20px',
+  fontFamily: 'Arial,sans-serif'
 }
 
 const blueText = {
@@ -101,7 +105,8 @@ const blueText = {
   fontWeight: 'bold',
   fontSize: '.8125em',
   lineHeight: '1.53846em',
-  cursor: 'pointer'
+  cursor: 'pointer',
+  fontFamily: 'Arial,sans-serif'
 }
 
 const form = {
@@ -130,7 +135,8 @@ const quantity = {
   clear: 'both',
   minHeight: '0.125rem',
   boxSizing: 'border-box',
-  float: 'left'
+  float: 'left',
+  fontFamily: 'Arial,sans-serif'
 }
 
 const plusMinus = {

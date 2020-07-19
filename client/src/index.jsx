@@ -20,7 +20,7 @@ class MainTitle extends React.Component {
       blackStars: '',
       whiteStars: '',
       halfStars: '',
-      modal: true
+      modal: false
     }
 
     this.onMouseOver.bind(this);
@@ -36,10 +36,10 @@ class MainTitle extends React.Component {
 
   componentDidMount() {
     //hardcoded to item 100 for development
-    var item = 100;
+    //var item = 100;
 
     //uncomment to use with a proxy server
-    //var item = window.location.href.split('=')[1];
+    var item = window.location.href.split('=')[1];
 
     //axios request for currency, price
     axios.get(`http://127.0.0.1:3005/itemPrice/${item}`)
