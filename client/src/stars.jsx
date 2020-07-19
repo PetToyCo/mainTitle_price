@@ -1,8 +1,8 @@
 import React from 'react';
-import { blackStars, halfStars, whiteStars, ratingNum } from './style.js';
+import { blackStars, halfStars, whiteStars, ratingNum, stars } from './style.js';
 
 var Stars = (props) => (
-  <div id='starsSection'>
+  <div id='starsSection' style={stars}>
     <span id='stars'>
     {props.black > 0 && <span id='b1' style={blackStars}></span>}
     {props.black > 1 && <span id='b2' style={blackStars}></span>}
@@ -16,6 +16,7 @@ var Stars = (props) => (
     {props.white > 3 && <span id='w4' style={whiteStars}></span>}
     {props.white > 4 && <span id='w5' style={whiteStars}></span>}
     </span>
+    <span>  </span>
     <span id='numOfReviews' style={ratingNum}>{`(${props.reviews})`}</span>
   </div>
 )

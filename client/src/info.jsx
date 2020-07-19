@@ -1,12 +1,12 @@
 import React from 'react';
 import Stars from './stars.jsx';
-import { title, upperSection, price, priceGuarantee, greenText, blueText, form, quantity, plusMinus, number } from './style.js';
+import { title, upperSection, priceMatch, price, priceGuarantee, greenText, blueText, form, quantity, plusMinus, number } from './style.js';
 
 var Info = (props) => (
   <div id='info'>
     <div id='title' style={title}>{`${props.product.title}, ${props.product.length}" X ${props.product.width}"`}</div>
     <div id='by'><span style={{fontSize: '.8125em',
-    lineHeight: '1.38462em', fontFamily: 'Arial,sans-serif'}}>By: </span><span id='brand' style={blueText} onMouseEnter={props.onMouseOver} onMouseLeave={props.onMouseOut}>{props.product.brand}</span></div>
+    lineHeight: '1.38462em', fontFamily: 'Arial,sans-serif', marginBottom: '5px', display: 'inline-block'}}>By: </span><span> </span><span id='brand' style={blueText} onMouseEnter={props.onMouseOver} onMouseLeave={props.onMouseOut}>{props.product.brand}</span></div>
     <div id='wrapper' style={upperSection}>
       <div id='starsDiv'>
         <Stars reviews={props.product.reviews} black={props.product.blackStars} white={props.product.whiteStars} half={props.product.halfStars}/>
@@ -17,7 +17,7 @@ var Info = (props) => (
       </div>
     </div>
     <div id='bottomSection'>
-      <div id='promo'>
+      <div id='promo' style={priceMatch}>
         <span style={priceGuarantee}> </span>
         <span> </span>
         <span style={greenText}>Price Match Guarantee </span>

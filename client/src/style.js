@@ -40,6 +40,11 @@ const whiteStars = {
   display: 'inline-block'
 }
 
+const stars = {
+  marginBottom: '15px',
+  display: 'inline-block'
+}
+
 const title = {
   fontSize: '1.25em',
   lineHeight: '1.25em',
@@ -67,7 +72,7 @@ const main = {
 const upperSection = {
   borderBottom: '1px solid #d4dadc',
   marginBottom: '20px',
-  paddingBottom: '15px'
+  paddingBottom: '15px',
 }
 
 const price = {
@@ -231,11 +236,18 @@ const modalDiv = {
   zIndex: '9999'
 }
 
+const priceMatch = {
+  marginBottom: '20px',
+  margin: '10px, 0px, 15px, 0px',
+  display: 'inline-block'
+}
+
 export {
   priceGuarantee,
   blackStars,
   halfStars,
   whiteStars,
+  stars,
   greenText,
   blueText,
   price,
@@ -249,5 +261,6 @@ export {
   number,
   modal,
   close,
-  modalDiv
+  modalDiv,
+  priceMatch
 }
