@@ -166,6 +166,59 @@ const number = {
   textAlign: 'center'
 }
 
+const modal = {
+  backgroundImage: 'url("http://127.0.0.1:3005/detailsModal.png")',
+  width: '485px',
+  height: '350px',
+  // display: 'block',
+  // maxWidth: '100%',
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: 'cover',
+  display: 'block',
+  // position: 'relative',
+  // marginLeft: 'auto',
+  // marginRight: 'auto',
+  // width: 'auto',
+  // height: 'auto'
+}
+
+const close = {
+  backgroundImage: 'url("http://127.0.0.1:3005/closeX.png")',
+  width: '30px',
+  height: '30px',
+  // display: 'block',
+  // maxWidth: '100%',
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: 'cover',
+  cursor: 'pointer',
+  display: 'block',
+  clear: 'both',
+  position: 'absolute',
+  top: '20px',
+  right: '20px',
+  zIndex: '1000'
+}
+
+const modalDiv = {
+  display: 'block',
+  left: '50%',
+  top: '50%',
+  transform: 'translateX(-50%) translateY(-50%)',
+  position: 'fixed',
+  minWidth: '540px',
+  maxWidth: '845px',
+  height: 'auto',
+  maxHeight: '94%',
+  overflow: 'auto',
+  margin: '0',
+  padding: '60px 30px 30px',
+  backgroundColor: '#fff',
+  boxSizing: 'border-box',
+  boxShadow: '0 5px 15px 6px rgba(0,0,0,0.1)',
+  borderRadius: '5px',
+  zIndex: '9999'
+}
+
 export {
   priceGuarantee,
   blackStars,
@@ -181,5 +234,8 @@ export {
   form,
   quantity,
   plusMinus,
-  number
+  number,
+  modal,
+  close,
+  modalDiv
 }

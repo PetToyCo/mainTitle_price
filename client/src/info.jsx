@@ -23,7 +23,7 @@ var Info = (props) => (
         </span>
         <span> </span>
         <span style={greenText}>Price Match Guarantee </span>
-        <span id='details' style={blueText} onMouseEnter={props.onMouseOver} onMouseLeave={props.onMouseOut}>Details</span>
+        <span id='details' onClick={props.openModal} style={blueText} onMouseEnter={props.onMouseOver} onMouseLeave={props.onMouseOut}>Details</span>
       </div>
       <div id='qty'>
         <form>
