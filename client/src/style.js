@@ -108,7 +108,8 @@ const form = {
   maxWidth: '1095px',
   marginLeft: 'auto',
   marginRight: 'auto',
-  clear: 'both'
+  clear: 'both',
+  verticalAlign: 'baseline'
 }
 
 const quantity = {
@@ -129,20 +130,31 @@ const quantity = {
 const plusMinus = {
   width: '26.66%',
   borderLeft: '1px solid #d4dadc',
+  borderRight: '0',
+  borderTop: '0',
+  borderBottom: '0',
+  borderRadius: '0px',
   backgroundColor: 'white',
+  //borderColor: '#8e9da2',
   color: '#005891',
   fontSize: '15px',
   fontWeight: 'bold',
   height: '43px',
   cursor: 'pointer',
-  transition: '0.2s'
+  transition: '0.2s',
+  padding: '11px 15px',
+  display: 'inline-block'
 }
 
 const number = {
   backgroundColor: 'rgba(244,246,246,0.4)',
   width: '26.66%',
   borderLeft: '1px solid #d4dadc',
-  borderRadius: '0 5px 5px 0',
+  borderRight: '0',
+  borderTop: '0',
+  borderBottom: '0',
+  borderRadius: '0 0px 0px 0',
+  // borderColor: '#8e9da2',
   padding: '11px 15px',
   boxSizing: 'border-box',
   color: '#333',
