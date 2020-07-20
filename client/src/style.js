@@ -2,15 +2,10 @@ const priceGuarantee = {
   backgroundImage: 'url("http://127.0.0.1:3005/checkmark.png")',
   width: '17px',
   height: '17px',
-
   position: 'absolute',
-  // width: '100%',
-  // height: '100%',
-
-  // display: 'block',
-  // maxWidth: '100%',
   backgroundRepeat: 'no-repeat',
-  backgroundSize: 'cover'
+  backgroundSize: 'cover',
+  marginLeft: '5px'
 }
 
 const blackStars = {
@@ -41,7 +36,7 @@ const whiteStars = {
 }
 
 const stars = {
-  marginBottom: '15px',
+  marginBottom: '20px',
   display: 'inline-block'
 }
 
@@ -71,7 +66,7 @@ const main = {
 
 const upperSection = {
   borderBottom: '1px solid #d4dadc',
-  marginBottom: '20px',
+  marginBottom: '40px',
   paddingBottom: '15px',
 }
 
@@ -80,7 +75,8 @@ const price = {
   fontSize: '1.25em',
   fontWeight: 'bold',
   lineHeight: '1.25em',
-  fontFamily: 'Arial,sans-serif'
+  fontFamily: 'Arial,sans-serif',
+  marginBottom: '20px'
 }
 
 const ratingNum = {
@@ -102,7 +98,8 @@ const greenText = {
   fontSize: '.8125em',
   lineHeight: '1.53846em',
   marginLeft: '20px',
-  fontFamily: 'Arial,sans-serif'
+  fontFamily: 'Arial,sans-serif',
+  marginLeft: '27px'
 }
 
 const blueText = {
@@ -122,7 +119,7 @@ const form = {
   width: '100%',
   overflow: 'hidden',
   maxWidth: '1095px',
-  marginLeft: 'auto',
+  marginLeft: '5px',
   marginRight: 'auto',
   clear: 'both',
   verticalAlign: 'baseline'
