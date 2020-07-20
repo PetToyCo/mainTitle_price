@@ -6,7 +6,7 @@ var Info = (props) => (
   <div id='info'>
     <div id='title' style={title}>{`${props.product.title}, ${props.product.length}" X ${props.product.width}"`}</div>
     <div id='by'><span style={{fontSize: '.8125em',
-    lineHeight: '1.38462em', fontFamily: 'Arial,sans-serif', marginBottom: '5px', display: 'inline-block'}}>By: </span><span> </span><span id='brand' style={blueText} onMouseEnter={props.onMouseOver} onMouseLeave={props.onMouseOut}>{props.product.brand}</span></div>
+    lineHeight: '1.38462em', fontFamily: 'Arial,sans-serif', marginBottom: '6px', display: 'inline-block'}}>By: </span><span> </span><span id='brand' style={blueText} onMouseEnter={props.onMouseOver} onMouseLeave={props.onMouseOut}>{props.product.brand}</span></div>
     <div id='wrapper' style={upperSection}>
       <div id='starsDiv'>
         <Stars reviews={props.product.reviews} black={props.product.blackStars} white={props.product.whiteStars} half={props.product.halfStars}/>

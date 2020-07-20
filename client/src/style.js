@@ -37,7 +37,8 @@ const whiteStars = {
 
 const stars = {
   marginBottom: '20px',
-  display: 'inline-block'
+  display: 'inline-block',
+  marginLeft: '1px'
 }
 
 const title = {
@@ -230,6 +231,8 @@ const modalDiv = {
   boxSizing: 'border-box',
   boxShadow: '0 5px 15px 6px rgba(0,0,0,0.1)',
   borderRadius: '5px',
+  border: '2px solid',
+  borderColor: '#3c94cd',
   zIndex: '9999'
 }
 
