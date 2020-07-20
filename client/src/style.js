@@ -2,10 +2,10 @@ const priceGuarantee = {
   backgroundImage: 'url("http://127.0.0.1:3005/checkmark.png")',
   width: '17px',
   height: '17px',
-  // display: 'block',
-  // maxWidth: '100%',
+  position: 'absolute',
   backgroundRepeat: 'no-repeat',
-  backgroundSize: 'cover'
+  backgroundSize: 'cover',
+  marginLeft: '5px'
 }
 
 const blackStars = {
@@ -35,6 +35,12 @@ const whiteStars = {
   display: 'inline-block'
 }
 
+const stars = {
+  marginBottom: '20px',
+  display: 'inline-block',
+  marginLeft: '1px'
+}
+
 const title = {
   fontSize: '1.25em',
   lineHeight: '1.25em',
@@ -43,7 +49,8 @@ const title = {
   fontStyle: 'normal',
   fontStretch: 'normal',
   letterSpacing: 'normal',
-  color: '#333'
+  color: '#333',
+  fontFamily: 'Arial,sans-serif'
 }
 
 const main = {
@@ -60,15 +67,17 @@ const main = {
 
 const upperSection = {
   borderBottom: '1px solid #d4dadc',
-  marginBottom: '20px',
-  paddingBottom: '15px'
+  marginBottom: '40px',
+  paddingBottom: '15px',
 }
 
 const price = {
   color: '#333',
   fontSize: '1.25em',
   fontWeight: 'bold',
-  lineHeight: '1.25em'
+  lineHeight: '1.25em',
+  fontFamily: 'Arial,sans-serif',
+  marginBottom: '20px'
 }
 
 const ratingNum = {
@@ -80,14 +89,18 @@ const ratingNum = {
   lineHeight: '1.38',
   letterSpacing: '.1px',
   textAlign: 'left',
-  color: '#333'
+  color: '#333',
+  fontFamily: 'Arial,sans-serif'
 }
 
 const greenText = {
   color: '#007500',
   fontWeight: 'bold',
   fontSize: '.8125em',
-  lineHeight: '1.53846em'
+  lineHeight: '1.53846em',
+  marginLeft: '20px',
+  fontFamily: 'Arial,sans-serif',
+  marginLeft: '27px'
 }
 
 const blueText = {
@@ -95,7 +108,8 @@ const blueText = {
   fontWeight: 'bold',
   fontSize: '.8125em',
   lineHeight: '1.53846em',
-  cursor: 'pointer'
+  cursor: 'pointer',
+  fontFamily: 'Arial,sans-serif'
 }
 
 const form = {
@@ -106,9 +120,10 @@ const form = {
   width: '100%',
   overflow: 'hidden',
   maxWidth: '1095px',
-  marginLeft: 'auto',
+  marginLeft: '5px',
   marginRight: 'auto',
-  clear: 'both'
+  clear: 'both',
+  verticalAlign: 'baseline'
 }
 
 const quantity = {
@@ -123,26 +138,38 @@ const quantity = {
   clear: 'both',
   minHeight: '0.125rem',
   boxSizing: 'border-box',
-  float: 'left'
+  float: 'left',
+  fontFamily: 'Arial,sans-serif'
 }
 
 const plusMinus = {
   width: '26.66%',
   borderLeft: '1px solid #d4dadc',
+  borderRight: '0',
+  borderTop: '0',
+  borderBottom: '0',
+  borderRadius: '0px',
   backgroundColor: 'white',
+  //borderColor: '#8e9da2',
   color: '#005891',
   fontSize: '15px',
   fontWeight: 'bold',
   height: '43px',
   cursor: 'pointer',
-  transition: '0.2s'
+  transition: '0.2s',
+  padding: '11px 15px',
+  display: 'inline-block'
 }
 
 const number = {
   backgroundColor: 'rgba(244,246,246,0.4)',
   width: '26.66%',
   borderLeft: '1px solid #d4dadc',
-  borderRadius: '0 5px 5px 0',
+  borderRight: '0',
+  borderTop: '0',
+  borderBottom: '0',
+  borderRadius: '0 0px 0px 0',
+  // borderColor: '#8e9da2',
   padding: '11px 15px',
   boxSizing: 'border-box',
   color: '#333',
@@ -154,11 +181,73 @@ const number = {
   textAlign: 'center'
 }
 
+const modal = {
+  backgroundImage: 'url("http://127.0.0.1:3005/detailsModal.png")',
+  width: '485px',
+  height: '350px',
+  // display: 'block',
+  // maxWidth: '100%',
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: 'cover',
+  display: 'block',
+  // position: 'relative',
+  // marginLeft: 'auto',
+  // marginRight: 'auto',
+  // width: 'auto',
+  // height: 'auto'
+}
+
+const close = {
+  backgroundImage: 'url("http://127.0.0.1:3005/closeX.png")',
+  width: '30px',
+  height: '30px',
+  // display: 'block',
+  // maxWidth: '100%',
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: 'cover',
+  cursor: 'pointer',
+  display: 'block',
+  clear: 'both',
+  position: 'absolute',
+  top: '20px',
+  right: '20px',
+  zIndex: '1000'
+}
+
+const modalDiv = {
+  display: 'block',
+  left: '50%',
+  top: '50%',
+  transform: 'translateX(-50%) translateY(-50%)',
+  position: 'fixed',
+  minWidth: '540px',
+  maxWidth: '845px',
+  height: 'auto',
+  maxHeight: '94%',
+  overflow: 'auto',
+  margin: '0',
+  padding: '60px 30px 30px',
+  backgroundColor: '#fff',
+  boxSizing: 'border-box',
+  boxShadow: '0 5px 15px 6px rgba(0,0,0,0.1)',
+  borderRadius: '5px',
+  border: '2px solid',
+  borderColor: '#3c94cd',
+  zIndex: '9999'
+}
+
+const priceMatch = {
+  marginBottom: '20px',
+  margin: '10px, 0px, 15px, 0px',
+  display: 'inline-block'
+}
+
 export {
   priceGuarantee,
   blackStars,
   halfStars,
   whiteStars,
+  stars,
   greenText,
   blueText,
   price,
@@ -169,5 +258,9 @@ export {
   form,
   quantity,
   plusMinus,
-  number
+  number,
+  modal,
+  close,
+  modalDiv,
+  priceMatch
 }

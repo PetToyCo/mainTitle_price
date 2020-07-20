@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import Info from './info.jsx';
+import Modal from './modal.jsx';
 import { main } from './style.js';
 
 class MainTitle extends React.Component {
@@ -18,7 +19,8 @@ class MainTitle extends React.Component {
       price: '',
       blackStars: '',
       whiteStars: '',
-      halfStars: ''
+      halfStars: '',
+      modal: false
     }
 
     this.onMouseOver.bind(this);
@@ -27,15 +29,17 @@ class MainTitle extends React.Component {
     this.qtyOnClickMinus.bind(this);
     this.onMouseOutButton.bind(this);
     this.onMouseOverButton.bind(this);
+    this.modalClose = this.modalClose.bind(this);
+    this.modalOpen = this.modalOpen.bind(this);
   }
 
 
   componentDidMount() {
     //hardcoded to item 100 for development
-    var item = 100;
+    //var item = 100;
 
     //uncomment to use with a proxy server
-    //var item = window.location.href.split('=')[1];
+    var item = window.location.href.split('=')[1];
 
     //axios request for currency, price
     axios.get(`http://127.0.0.1:3005/itemPrice/${item}`)
@@ -150,12 +154,25 @@ class MainTitle extends React.Component {
     }
   }
 
+  modalClose() {
+    this.setState({
+      modal: false
+    });
+  }
+
+  modalOpen() {
+    this.setState({
+      modal: true
+    });
+  }
+
 
 
   render() {
     return (
       <div id='mainTitle' style={main}>
-        <Info product={this.state} onButton={this.onMouseOverButton} offButton={this.onMouseOutButton} onMouseOver={this.onMouseOver} onMouseOut={this.onMouseOut} plus={this.qtyOnClickPlus} minus={this.qtyOnClickMinus}/>
+        <Info product={this.state} openModal={this.modalOpen} onButton={this.onMouseOverButton} offButton={this.onMouseOutButton} onMouseOver={this.onMouseOver} onMouseOut={this.onMouseOut} plus={this.qtyOnClickPlus} minus={this.qtyOnClickMinus}/>
+        {this.state.modal && <Modal closeModal={this.modalClose} />}
       </div>
     )
   }

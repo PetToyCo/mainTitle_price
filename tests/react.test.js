@@ -45,7 +45,7 @@ describe('mainTitle_price service', () => {
 
   it("should load brand into 'by' element", () => {
     wrapper = shallow(<Info product={fakeState} />);
-    expect((wrapper).find('#by').text()).toBe(`By: ${fakeState.brand}`);
+    expect((wrapper).find('#by').text()).toBe(`By:  ${fakeState.brand}`);
   });
 
   it("should load price and currency into price div", () => {
@@ -57,7 +57,7 @@ describe('mainTitle_price service', () => {
   it("should correctly load data into Stars component", () => {
     wrapper = shallow(<Stars reviews={fakeStars.reviews} black={fakeStars.blackStars} white={fakeStars.whiteStars} half={fakeStars.halfStars} />);
     expect((wrapper).find('#numOfReviews').text()).toBe(`(${fakeStars.reviews})`);
-    expect((wrapper).find('#starsSection span').length).toBe(7);
+    expect((wrapper).find('#starsSection span').length).toBe(8);
     expect((wrapper).find('#b1').length).toBe(1);
     expect((wrapper).find('#b2').length).toBe(1);
     expect((wrapper).find('#b3').length).toBe(1);
