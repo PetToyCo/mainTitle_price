@@ -39,6 +39,10 @@ app.use((req, res, next) => {
       res.header('Access-Control-Allow-Origin', `${address3}:3006`); //delivery
     } else if (req.headers.referer.includes('3000')) {
       res.header('Access-Control-Allow-Origin', `${address1}:3000`); //proxy
+    } else if (req.headers.referer.includes('3000')) {
+      res.header('Access-Control-Allow-Origin', `${address2}:3000`); //nick's proxy
+    } else if (req.headers.referer.includes('3000')) {
+      res.header('Access-Control-Allow-Origin', `${address3}:3000`); //kate's proxy
     }
   }
   next();
