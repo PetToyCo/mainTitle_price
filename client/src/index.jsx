@@ -41,8 +41,14 @@ class MainTitle extends React.Component {
     //uncomment to use with a proxy server
     var item = window.location.href.split('=')[1];
 
+    //development
+    //var priceAddress = 'http://127.0.0.1';
+
+    //production
+    var priceAddress = 'http://52.14.208.55';
+
     //axios request for currency, price
-    axios.get(`http://127.0.0.1:3005/itemPrice/${item}`)
+    axios.get(`${priceAddress}:3005/itemPrice/${item}`)
       .then(data => {
         console.log('success getting itemPrice');
         this.setState({
@@ -55,7 +61,7 @@ class MainTitle extends React.Component {
       });
 
     //axios request for brand, title
-    axios.get(`http://127.0.0.1:3002/descriptionObject/${item}`)
+    axios.get(`${priceAddress}:3002/descriptionObject/${item}`)
       .then(data => {
         console.log('success getting descriptionObject');
         var length = data.data.attributes.length.split(' ')[0];
@@ -72,8 +78,14 @@ class MainTitle extends React.Component {
         console.log('error getting descObj in componentDidMount: ', err);
       });
 
+    //development
+    //var starsAddress = 'http://127.0.0.1';
+
+    //production
+    var starsAddress = 'http://54.183.137.155';
+
     //axios request for stars and # of reviews
-    axios.get(`http://127.0.0.1:3001/averageReviews/${item}`)
+    axios.get(`${starsAddress}:3001/averageReviews/${item}`)
       .then(data => {
         console.log('success getting averageReviews: ', data);
         var whole = data.data.reviewAverage.split('.')[0];

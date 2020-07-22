@@ -14,8 +14,11 @@ This service provides a module that displays the item's title and price, as well
   3. Proxy-Integration
   4. Requirements
   5. Development
+  6. Deployment
 
 ## Usage
+Note: This service is set up for deploment. If you need to change it back to Development mode, please follow the instructions in the Deployment section below before continuing.
+
 1. From the root directory:
 npm install
 
@@ -71,3 +74,10 @@ npm install
 This service uses Jest for unit testing of the mongoose database schema and server endpoints, and Jest with Enzyme for testing of the React components.
 From within the root directory:
 npm run test
+
+## Deployment
+1. In server.js uncomment lines 14-27 and comment out lines 30-45
+2. In database/index.js uncomment line 4 and comment out line 7
+3. In client/src/index.jsx uncomment lines 45 and 82 and comment out lines 48 and 85
+
+To restore the service to deployment mode, do the reverse of the above steps, and update any IP addresses that may have changed.

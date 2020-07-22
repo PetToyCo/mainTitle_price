@@ -1,5 +1,10 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/mainTitle_price');
+
+//development:
+//mongoose.connect('mongodb://localhost/mainTitle_price');
+
+//production:
+mongoose.connect('mongodb://ec2-52-14-208-55.us-east-2.compute.amazonaws.com/Price', {useUnifiedTopology: true, useNewUrlParser: true});
 
 const db = mongoose.connection;
 
