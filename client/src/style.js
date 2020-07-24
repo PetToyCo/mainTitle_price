@@ -1,15 +1,22 @@
+//development
+//const IP = '127.0.0.1';
+
+//deployed
+const IP = '52.14.208.55';
+
 const priceGuarantee = {
-  backgroundImage: 'url("http://127.0.0.1:3005/checkmark.png")',
+  backgroundImage: `url('http://${IP}:3005/checkmark.png')`,
   width: '17px',
   height: '17px',
   position: 'absolute',
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'cover',
-  marginLeft: '5px'
+  marginLeft: '5px',
+  zIndex: '1'
 }
 
 const blackStars = {
-  backgroundImage: 'url("http://127.0.0.1:3005/blackStar.png")',
+  backgroundImage: `url("http://${IP}:3005/blackStar.png")`,
   height: '14px',
   width: '14px',
   backgroundRepeat: 'no-repeat',
@@ -18,7 +25,7 @@ const blackStars = {
 }
 
 const halfStars = {
-  backgroundImage: 'url("http://127.0.0.1:3005/halfStar.png")',
+  backgroundImage: `url("http://${IP}:3005/halfStar.png")`,
   height: '14px',
   width: '14px',
   backgroundRepeat: 'no-repeat',
@@ -27,7 +34,7 @@ const halfStars = {
 }
 
 const whiteStars = {
-  backgroundImage: 'url("http://127.0.0.1:3005/whiteStar.png")',
+  backgroundImage: `url("http://${IP}:3005/whiteStar.png")`,
   height: '14px',
   width: '14px',
   backgroundRepeat: 'no-repeat',
@@ -150,7 +157,6 @@ const plusMinus = {
   borderBottom: '0',
   borderRadius: '0px',
   backgroundColor: 'white',
-  //borderColor: '#8e9da2',
   color: '#005891',
   fontSize: '15px',
   fontWeight: 'bold',
@@ -169,7 +175,6 @@ const number = {
   borderTop: '0',
   borderBottom: '0',
   borderRadius: '0 0px 0px 0',
-  // borderColor: '#8e9da2',
   padding: '11px 15px',
   boxSizing: 'border-box',
   color: '#333',
@@ -182,27 +187,18 @@ const number = {
 }
 
 const modal = {
-  backgroundImage: 'url("http://127.0.0.1:3005/detailsModal.png")',
+  backgroundImage: `url("http://${IP}:3005/detailsModal.png")`,
   width: '485px',
   height: '350px',
-  // display: 'block',
-  // maxWidth: '100%',
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'cover',
   display: 'block',
-  // position: 'relative',
-  // marginLeft: 'auto',
-  // marginRight: 'auto',
-  // width: 'auto',
-  // height: 'auto'
 }
 
 const close = {
-  backgroundImage: 'url("http://127.0.0.1:3005/closeX.png")',
+  backgroundImage: `url("http://${IP}:3005/closeX.png")`,
   width: '30px',
   height: '30px',
-  // display: 'block',
-  // maxWidth: '100%',
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'cover',
   cursor: 'pointer',

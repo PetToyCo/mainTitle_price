@@ -79,5 +79,6 @@ npm run test
 1. In server.js uncomment lines 14-27 and comment out lines 30-45
 2. In database/index.js uncomment line 4 and comment out line 7
 3. In client/src/index.jsx uncomment lines 45 and 82 and comment out lines 48 and 85
+4. In client/src/style.js uncomment line 2 and comment out line 5
 
 To restore the service to deployment mode, do the reverse of the above steps, and update any IP addresses that may have changed.
