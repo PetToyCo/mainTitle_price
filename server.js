@@ -6,6 +6,14 @@ const morgan = require('morgan');
 const app = express();
 
 app.use(morgan('dev'));
+
+//gzip
+app.get('*.js', function (req, res, next) {
+  req.url = req.url + '.gz';
+  res.set('Content-Encoding', 'gzip');
+  next();
+});
+
 app.use(express.static(path.join(__dirname, 'client/public')));
 
 //crossorigin permission for 3000, 3004 and 3006

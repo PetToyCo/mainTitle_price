@@ -1,4 +1,7 @@
+var CompressionPlugin = require('compression-webpack-plugin');
+
 module.exports = {
+  mode: 'production',
   entry: __dirname + '/client/src/render.jsx',
   module: {
     rules: [
@@ -14,6 +17,15 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    new CompressionPlugin({
+      asset: "[path].gz[query]",
+      algorithm: "gzip",
+      test: /\.js$|\.css$|\.html$/,
+      threshold: 10240,
+      minRatio: 0.8
+    })
+  ],
   output: {
     filename: 'bundle.js',
     path: __dirname + '/client/public'
