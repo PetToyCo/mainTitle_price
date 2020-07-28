@@ -7,14 +7,6 @@ const app = express();
 
 app.use(morgan('dev'));
 
-//gzip
-app.get('*.js', function (req, res, next) {
-  req.url = req.url + '.gz';
-  res.set('Content-Encoding', 'gzip');
-  next();
-});
-
-app.use(express.static(path.join(__dirname, 'client/public')));
 
 //crossorigin permission for 3000, 3004 and 3006
 app.use((req, res, next) => {
@@ -55,6 +47,16 @@ app.use((req, res, next) => {
   }
   next();
 });
+
+//gzip
+app.get('*.js', function (req, res, next) {
+  req.url = req.url + '.gz';
+  res.set('Content-Encoding', 'gzip');
+  next();
+});
+
+
+app.use(express.static(path.join(__dirname, 'client/public')));
 
 app.get('/itemPrice/:itemId', (req, res) => {
   const itemId = req.params.itemId;
