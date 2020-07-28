@@ -116,4 +116,25 @@ describe('Server Endpoints Test', () => {
     done();
   });
 
+  //tests for array queries
+  it('correctly retrieves data from the /itemPrice endpoint when given an array of itemIds', async (done) => {
+    const response = await request.get('/itemPrice/array101,105,109');
+    const item101 = response.body[0];
+    const item105 = response.body[1];
+    const item109 = response.body[2];
+
+    expect(response.status).toBe(200);
+    expect(item101.price).toBe(9.99);
+    expect(item105.price).toBe(5.95);
+    expect(item109.price).toBe(10.99);
+    done();
+  });
+
+  it('should receive a 404 error when requesting an invalid itemId in an array', async (done) => {
+    const response = await request.get('/itemPrice/array199,200,201');
+
+    expect(response.status).toBe(404);
+    done();
+  });
+
 });
