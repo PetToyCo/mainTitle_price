@@ -58,6 +58,23 @@ JSON response format:
 }
 ```
 
+Endpoint: /itemPrice/array###,###
+```
+JSON response format:
+[
+{
+  itemId: "a string with the first item's id",
+  price: “a number representing the item’s price”,
+  currency: “a string representing the symbol of the item’s currency, ie $”
+},
+{
+  itemId: "a string with the second item's id",
+  price: “a number representing the item’s price”,
+  currency: “a string representing the symbol of the item’s currency, ie $”
+}
+]
+```
+
 ## Proxy-Integration
 To use this service with a proxy server, please add `<div id="mainTitleMount"></div>` right below the "gallery" div in index.html of your proxy server, and please add `<script type="text/javascript" src="http://localhost:3005/bundle.js"></script>` near the bottom of the same file.
 
