@@ -42,10 +42,10 @@ class MainTitle extends React.Component {
     var item = window.location.href.split('=')[1];
 
     //development
-    var priceAddress = 'http://127.0.0.1';
+    //var priceAddress = 'http://127.0.0.1';
 
     //production
-    //var priceAddress = 'http://52.14.208.55';
+    var priceAddress = 'http://52.14.208.55';
 
     //axios request for currency, price
     axios.get(`${priceAddress}:3005/itemPrice/${item}`)
@@ -79,10 +79,10 @@ class MainTitle extends React.Component {
       });
 
     //development
-    var starsAddress = 'http://127.0.0.1';
+    //var starsAddress = 'http://127.0.0.1';
 
     //production
-    //var starsAddress = 'http://54.183.137.155';
+    var starsAddress = 'http://54.183.137.155';
 
     //axios request for stars and # of reviews
     axios.get(`${starsAddress}:3001/averageReviews/${item}`)
