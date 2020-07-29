@@ -46,6 +46,8 @@ Follow additional instructions in the Proxy-Integration section below.
 ## Endpoints
 This service has one endpoint (/itemPrice/:itemId) which can be used to retrieve a JSON object with that item's price and currency. Valid itemIds are from 100-199 inclusive.
 
+Note: It is possible to request multiple items at once using the format: /itemPrice/array###,###,###
+
 Endpoint: /itemPrice/###
 ```
 JSON response format:
@@ -54,6 +56,23 @@ JSON response format:
   price: “a number representing the item’s price”,
   currency: “a string representing the symbol of the item’s currency, ie $”
 }
+```
+
+Endpoint: /itemPrice/array###,###
+```
+JSON response format:
+[
+{
+  itemId: "a string with the first item's id",
+  price: “a number representing the item’s price”,
+  currency: “a string representing the symbol of the item’s currency, ie $”
+},
+{
+  itemId: "a string with the second item's id",
+  price: “a number representing the item’s price”,
+  currency: “a string representing the symbol of the item’s currency, ie $”
+}
+]
 ```
 
 ## Proxy-Integration
