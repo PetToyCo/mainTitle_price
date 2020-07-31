@@ -42,10 +42,10 @@ class MainTitle extends React.Component {
     var item = window.location.href.split('=')[1];
 
     //development
-    var priceAddress = 'http://127.0.0.1';
+    //var priceAddress = 'http://127.0.0.1';
 
     //production
-    //var priceAddress = 'http://52.14.208.55';
+    var priceAddress = 'http://52.14.208.55';
 
     //axios request for currency, price
     axios.get(`${priceAddress}:3005/itemPrice/${item}`)
@@ -79,24 +79,23 @@ class MainTitle extends React.Component {
       });
 
     //development
-    var starsAddress = 'http://127.0.0.1';
+    //var starsAddress = 'http://127.0.0.1';
 
     //production
-    //var starsAddress = 'http://54.183.137.155';
+    var starsAddress = 'http://54.183.137.155';
 
     //axios request for stars and # of reviews
     axios.get(`${starsAddress}:3001/averageReviews/${item}`)
       .then(data => {
-        console.log('success getting averageReviews: ', data);
+        console.log('success getting averageReviews');
         var whole = data.data.reviewAverage.split('.')[0];
         var wholeNum = parseInt(whole);
         var decimal = data.data.reviewAverage.split('.')[1];
         var decNum = parseFloat(decimal);
-        console.log('wholeNum: ', wholeNum);
-        console.log('decNum: ', decNum);
         var black;
         var white;
         var half;
+
         if (decNum < 3) {
           black = wholeNum;
           white = 5 - wholeNum;
@@ -107,7 +106,7 @@ class MainTitle extends React.Component {
           white = 4 - wholeNum;
         } else {
           black = wholeNum + 1;
-          white = 0;
+          white = 5 - black;
           half = 0;
         }
         this.setState({
@@ -117,7 +116,6 @@ class MainTitle extends React.Component {
           whiteStars: white,
           halfStars: half
         });
-        console.log('state: ', this.state);
       })
       .catch(err => {
         console.log('error getting averageReviews in componentDidMount: ', err);
@@ -137,13 +135,11 @@ class MainTitle extends React.Component {
   }
 
   onMouseOverButton(e) {
-    console.log('mouseButtonOn', e.target.id)
     var element = document.getElementById(e.target.id);
     element.style.backgroundColor = 'rgba(215, 220, 220, 0.4)';
   }
 
   onMouseOutButton(e) {
-    console.log('mouseButtonOff', e.target.id)
     var element = document.getElementById(e.target.id);
     element.style.backgroundColor = 'white';
   }
