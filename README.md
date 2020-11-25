@@ -9,12 +9,12 @@ This service provides a module that displays the item's title and price, as well
 - https://github.com/PetToyCo/ProductRecommendations
 
 ## Table of Contents
-  1. Usage
-  2. Endpoints
-  3. Proxy-Integration
-  4. Requirements
-  5. Development
-  6. Deployment
+  1. [Usage](#-usage)
+  2. [Endpoints](#-endpoints)
+  3. [Proxy-Integration](#-proxy-integration)
+  4. [Requirements](#-requirements)
+  5. [Development](#-development)
+  6. [Deployment](#-deployment)
 
 ## Usage
 Note: This service is set up for deploment. If you need to change it back to Development mode, please follow the instructions in the Deployment section below before continuing.
@@ -41,6 +41,7 @@ npm start
 5. In the browser, navigate to http://127.0.0.1:3005 to see the service. For development purposes it has been hardcoded to display information for item 100.
 
 6. To use this service with a proxy server, go to client/src/index.jsx and uncomment line 35, then comment out line 32. Then, from the root directory in the terminal: npm run build 
+
 Follow additional instructions in the Proxy-Integration section below.
 
 ## Endpoints
