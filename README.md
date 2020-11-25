@@ -9,12 +9,12 @@ This service provides a module that displays the item's title and price, as well
 - https://github.com/PetToyCo/ProductRecommendations
 
 ## Table of Contents
-  1. [Usage](#-usage)
-  2. [Endpoints](#-endpoints)
-  3. [Proxy-Integration](#-proxy-integration)
-  4. [Requirements](#-requirements)
-  5. [Development](#-development)
-  6. [Deployment](#-deployment)
+  1. [Usage](#usage)
+  2. [Endpoints](#endpoints)
+  3. [Proxy-Integration](#proxy-integration)
+  4. [Requirements](#requirements)
+  5. [Development](#development)
+  6. [Deployment](#deployment)
 
 ## Usage
 Note: This service is set up for deploment. If you need to change it back to Development mode, please follow the instructions in the Deployment section below before continuing.
